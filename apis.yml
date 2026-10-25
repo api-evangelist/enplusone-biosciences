@@ -1,25 +1,71 @@
 aid: enplusone-biosciences
+
 name: EnPlusOne Biosciences
-description: 'EnPlusOne Biosciences is a company surfaced via the API Evangelist harvest backlog (source:
-  vc-portfolio; backed by coatue) and added to the network as a stub for full-pipeline profiling.'
+
+description: 'EnPlusOne Biosciences is a biotechnology company focused on developing flexible enzymatic platforms for scalable RNA therapeutics. They aim to overcome current manufacturing limitations by unlocking over 200 RNA modifications, enabling faster and more diverse therapeutic development. Their mission is to make better RNA, solving today’s limitations and unlocking tomorrow’s innovations in the RNA therapeutics space.'
+
 url: https://raw.githubusercontent.com/api-evangelist/enplusone-biosciences/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-25 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-25'
+
 modified: '2026-10-25'
+
 tags:
 - Company
-apis: []
+- Biotechnology
+- RNA Therapeutics
+- Enzymatic Platform
+- Synthetic Biology
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-x-backed-by:
-- coatue
+
 common:
+- type: Hosts
+  url: hosts/enplusone-biosciences-hosts.yml
+- type: Vendors
+  url: vendors/enplusone-biosciences-vendors.yml
+- type: TermsOfService
+  url: https://enplusone.bio/terms-of-use/
+- type: PrivacyPolicy
+  url: https://enplusone.bio/privacy-policy/
+- type: Newsroom
+  url: https://enplusone.bio/news/
+- type: Leadership
+  url: https://enplusone.bio/team/
+- type: DomainSecurity
+  url: security/enplusone-biosciences-domain-security.yml
 - type: Website
   url: https://www.enplusonebio.com/
+
+apis: []
+
+x-backed-by:
+- coatue
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: The website returns HTML pages and no machine‑readable OpenAPI spec was found at common endpoints.
+  evidence:
+    - url: https://enplusone.bio/
+      status: 200
+  checked: '2026-10-25'
+x-enrichment:
+  date: '2026-10-25'
+  status: enriched
+  artifacts_added: 6
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
